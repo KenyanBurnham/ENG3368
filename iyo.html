@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>IYO</title>
+  <!-- Stylesheets-->
+  <link rel="stylesheet" href="css/iyo.css">
+  <!-- Scripts below-->
+  <script src="js/index.js"></script>
+</head>
+
+<body>
+    <!--Div that contains the board when created -->
+    <div id="board" onLoad="recursive()">&nbsp;</div>
+    <!--Div that contains the reshuffle button -->
+    <div class="button-container">
+        <button type="button" name="button" onclick="recursive()">Shuffle</button>
+    </div>
+
+    <script type="text/javascript">
+        setTimeout(function(){
+            recursive();
+        }, 500);
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/**=============================================================================
+  pspe.css
+--------------------------------------------------------------------------------
+  Description:
+  Contains css that required additional custoization from TTU css
+--------------------------------------------------------------------------------
+  Date: 02/11/2019
+--------------------------------------------------------------------------------
+  Developer: Kenyan Burnham
+=============================================================================**/
+
+/**======================= Elements and Classes =============================**/
+
+ form input[type="text"] {
+     background-color: white;
+ }
+
+div.bio-detail {
+    margin-bottom: 1rem;
+    font-family: 'ITC Charter W01',Georgia,Garamond,serif;
+}
+
+.bio-photo img {
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.08), 0 3px 1px -2px rgba(0,0,0,.1), 0 1px 5px 0 rgba(0,0,0,.06);
+}
+
+/**=========================== Classes ===================================== **/
+
+.action-button{
+    background-color: #C00;
+}
+
+.bio-department {
+    font-size: 1.2em;
+}
+
+.bio-jobtitle {
+    font-size: 1.6em;
+    font-style: italic;
+    line-height: 1;
+}
+
+.fieldset-reset{
+    border-style: none !important;
+}
+
+.ttu-light-grey-emphasis{
+    background-color: #F9F8F8;
+    border: 1px solid #808285;
+}
+
+.ttu-box-emphasis{
+    border: 1px solid black;
+}
+
+.ttu-red-emphasis{
+    color: #C00;
+}
+
+.pspe-header-padding-adjustment{
+    padding: 20px 20px;
+}

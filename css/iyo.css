@@ -1,0 +1,41 @@
+#wrapper {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+#board {
+    height: 500px;
+    width: 100%;/* previously 65vw */
+}
+#adjacency {
+    width: 50vw; /* previously 50vw */
+}
+
+.button-container{
+    align-content: center;
+    width: 100%;
+}
+
+.ninety-degrees{
+  -webkit-transform:rotate(90deg);
+   -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+     -o-transform:rotate(90deg);
+        transform:rotate(90deg);
+}
+
+.one-eighty-degrees{
+  -webkit-transform:rotate(180deg);
+   -moz-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+     -o-transform:rotate(180deg);
+        transform:rotate(180deg);
+}
+
+.two-seventy-degrees{
+  -webkit-transform:rotate(270deg);
+   -moz-transform:rotate(270deg);
+    -ms-transform:rotate(270deg);
+     -o-transform:rotate(270deg);
+        transform:rotate(270deg);
+}

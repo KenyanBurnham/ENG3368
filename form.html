@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kenyan Burnham's </title>
+    </head>
+    <body>
+        <!-- Context-->
+        <section>
+            <h1>Scripting Exercise #1</h1>
+            <p>This is a scripting exercise.</p>
+            <p>
+              I'm thinking it would be fun to make an visual/digital archive of some sort,
+              so I have written this form to take in information for a visual/digital archive.
+            </p>
+            <p>
+              Copy the image displayed above the form and save it should you want to test the email capability.
+            </p>
+        </section>
+
+        <!--The form -->
+        <form class="" action="index.html" method="post">
+
+            <!-- This fieldset contains the submitter's information for follow-up-->
+            <fieldset>
+                <legend>Submitter Information</legend>
+                <!--First Name-->
+                <input type="text" id="fname" name="fname" placeholder="First Name"><br><br>
+                <!--First Name-->
+                <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
+                <!-- Email-->
+                <input type="email" name="submitterEmial" placeholder="your@email.com">
+            </fieldset>
+
+            <!-- This fieldset contains an optional select for organizing the archive-->
+            <fieldset>
+                <!-- This is the meta information for what category it should be filed under-->
+                <label for="categoryForSubmisison">Submission Category</label>
+                <input list="categories" name="categoryForSubmisison">
+                    <datalist id="categories">
+                        <option value="Esoteric">
+                        <option value="Ludic">
+                        <option value="Useful">
+                        <option value="Other"></option>
+                    </datalist>
+                <!-- TODO: Make sure that this funcitonality is scripted -->
+                <!--This is if they user selects Other -->
+                <textarea name="name" rows="8" cols="80" placeholder="Please specify if 'Other' selected." hidden></textarea>
+            </fieldset>
+
+            <!-- This fieldset takes an image file-->
+            <fieldset>
+                <hr>
+                <label for="imageInput">Upload Image (Maximum size: 128 MB)</label>
+                <input type="image" name="imageInput" value=""><br><br>
+                <hr>
+            </fieldset>
+
+            <!-- This is the submisison button -->
+            <fieldset>
+                <input type="submit" name="" value="">Submit</input>
+            </fieldset>
+        </form>
+    </body>
+</html>

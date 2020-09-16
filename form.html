@@ -4,7 +4,8 @@
         <title>Kenyan Burnham's </title>
     </head>
     <body>
-        <!-- Context-->
+
+        <!-- This section contains the context of the form-->
         <section>
             <h1>Scripting Exercise #1</h1>
             <p>This is a scripting exercise.</p>
@@ -16,49 +17,56 @@
               Copy the image displayed above the form and save it should you want to test the email capability.
             </p>
         </section>
+        <!-- This aside holds all of the form elements-->
+        <aside class="">
+            <!-- TODO: Add the required attributes -->
+            <!--The form -->
+            <form class="" action="mailto:kenyan.burnham@ttu.edu?subject=Submission sent from Kenyan\'s Site" method="post">
 
-        <!--The form -->
-        <form class="" action="index.html" method="post">
+                <!-- This fieldset contains the submitter's information for follow-up-->
+                <fieldset>
+                    <legend>Submitter Information</legend>
+                    <!--First Name-->
+                    <input type="text" id="fname" name="fname" placeholder="First Name"><br><br>
+                    <!--First Name-->
+                    <input type="text" id="lname" name="lname" placeholder="Last Name"><br><hr>
+                    <!-- Email-->
+                    <input type="email" name="submitterEmial" placeholder="your@email.com">
+                </fieldset>
 
-            <!-- This fieldset contains the submitter's information for follow-up-->
-            <fieldset>
-                <legend>Submitter Information</legend>
-                <!--First Name-->
-                <input type="text" id="fname" name="fname" placeholder="First Name"><br><br>
-                <!--First Name-->
-                <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
-                <!-- Email-->
-                <input type="email" name="submitterEmial" placeholder="your@email.com">
-            </fieldset>
+                <!-- This fieldset contains an optional select for organizing the archive-->
+                <fieldset>
+                    <legend>Submission Category</legend>
+                    <label for="categoryForSubmisison">This will</label>
+                    <!-- This is the meta information for what category it should be filed under-->
+                    <input list="categories" name="categoryForSubmisison">
+                        <datalist id="categories">
+                            <option value="Esoteric">
+                            <option value="Ludic">
+                            <option value="Useful">
+                            <option value="Other"></option>
+                        </datalist>
+                    <!-- TODO: Make sure that this funcitonality is scripted -->
+                    <!--This is if they user selects Other -->
+                    <textarea name="name" rows="8" cols="80" placeholder="Please specify if 'Other' selected." hidden></textarea>
+                </fieldset>
 
-            <!-- This fieldset contains an optional select for organizing the archive-->
-            <fieldset>
-                <!-- This is the meta information for what category it should be filed under-->
-                <label for="categoryForSubmisison">Submission Category</label>
-                <input list="categories" name="categoryForSubmisison">
-                    <datalist id="categories">
-                        <option value="Esoteric">
-                        <option value="Ludic">
-                        <option value="Useful">
-                        <option value="Other"></option>
-                    </datalist>
-                <!-- TODO: Make sure that this funcitonality is scripted -->
-                <!--This is if they user selects Other -->
-                <textarea name="name" rows="8" cols="80" placeholder="Please specify if 'Other' selected." hidden></textarea>
-            </fieldset>
+                <!-- This fieldset takes an image file-->
+                <fieldset>
+                    <legend>Image Upload</legend>
+                    <label for="imageInput">Maximum Image Size: 128 MB</label><br><br>
+                    <input type="file" class="form-control" id="image" name="imageInput"><br><br>
+                </fieldset>
 
-            <!-- This fieldset takes an image file-->
-            <fieldset>
-                <hr>
-                <label for="imageInput">Upload Image (Maximum size: 128 MB)</label>
-                <input type="image" name="imageInput" value=""><br><br>
-                <hr>
-            </fieldset>
+                <!-- This is the submisison button -->
+                <fieldset>
+                    <!-- This is the submission button -->
+                    <input type="submit" name="" value="Submit"></input>
+                    <!-- This just an optional reset button-->
+                    <input type="reset" name="" value="Clear Responses">
+                </fieldset>
+            </form>
+        </aside>
 
-            <!-- This is the submisison button -->
-            <fieldset>
-                <input type="submit" name="" value="">Submit</input>
-            </fieldset>
-        </form>
     </body>
 </html>

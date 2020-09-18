@@ -1,0 +1,122 @@
+
+/*=============================================================
+-------------------Elements-------------------------------------
+=============================================================*/
+
+body{
+    background-image: linear-gradient(to right, rgb(212,244,221, 1), rgb(23,190,187, 1), rgb(14,124,123, 1));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    font-family: "Roboto", sans-serif;
+    height: 101vh;
+    margin: 0px 0px;
+    overflow: hidden;
+    overflow-y: hidden;
+    padding: 0px 0px;
+    width: 100vw;
+}
+
+fieldset{
+    border: 0;
+}
+
+h1{
+    color: black;
+    opacity: .86;
+}
+
+small{
+    color: black;
+    opacity: .68;
+}
+
+textarea{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Roboto", sans-serif;
+    padding: 12px 20px;
+}
+
+/*=============================================================
+-------------------Classes-------------------------------------
+=============================================================*/
+
+.button-style{
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.button-sample{
+    background-color: white;
+    border: 0;
+    color: #007bff;
+}
+
+.button-submit{
+    background-color: #28a745;
+    color: white;
+}
+
+.button-submit-disabled{
+    background-color: grey;
+    color: black;
+    opacity: .68;
+}
+
+.button-reset{
+    background-color: white;
+    border: 0;
+    color: gray;
+}
+
+.form-section{
+    background-color: white;
+    box-shadow: 10px 10px #E6E6E6;
+    float: left;
+    padding: 2vw 5vw;
+    width: 33%;
+}
+
+.full-content-container{
+    align-items: center;
+    height: 100%;
+    margin: 0px 0px;
+    padding: 5% 32%;
+    width: 100%;
+}
+
+.inputs {
+    width: 45%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.image-container{
+    background-color: white;
+    box-shadow: 10px 10px #E6E6E6;
+}
+
+.option-style{
+    opacity: .65;
+}
+
+.thank-you-container{
+    align-content: center;
+    float: inherit;
+    padding-top: 15vh;
+    text-align: center;
+    width: 100%;
+}
+
+.thank-you-message{
+    color: white;
+}
+
+.thank-you-title{
+    color: white;
+}

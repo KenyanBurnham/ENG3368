@@ -103,6 +103,7 @@
                                 //place it in the input box
                                 let imageHostedInput = document.getElementById('imageHostedInput');
                                 imageHostedInput.value = urlForSample;
+                                // TODO: Add the disable button functionality
                             }
 
                         </script>
@@ -138,8 +139,10 @@
         <div class="thank-you-container" id="thankYouContainer" hidden>
             <aside class="thank-you-message">
                 <h1 class="thank-you-title">Thank you for your submission <span id="firstNameGoesHere"></span> <span id="lastNameGoesHere"></span>!</h1>
-                <img id="imageOutput" class="image-container" src="" alt="This is an image hosted from an external source, content varies.">
-                <p>If you would like, you can always <a onclick="backToSubmission();">submit another</a>.</p>
+                <span >
+                  <img id="imageOutput" class="image-container" src="" alt="This is an image hosted from an external source, content varies.">
+                </span>
+                <h1 class="thank-you-title">If you would like, you can <a onclick="backToSubmission();" class="resubmit-anchor">submit another &#8594;</a></h1>
 
             </aside>
         </div>
@@ -160,7 +163,6 @@
 
                 //Evaluate if all the required elements have something in them
                 if((fNameInput != "") && (lNameInput != "") && (emailInput != "") && (imageHostedInput != "")){
-                    // TODO: Image upload doesn't work properly yet, fix the required behavior
                     //Change the disabled property
                     submitButton.disabled = false;
                     submitButton.classList.remove("button-submit-disabled");

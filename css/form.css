@@ -99,10 +99,16 @@ textarea{
 .image-container{
     background-color: white;
     box-shadow: 10px 10px #E6E6E6;
+    padding: 3vw 3vw;
 }
 
 .option-style{
     opacity: .65;
+}
+
+.resubmit-anchor{
+    color: black;
+    opacity: .68;
 }
 
 .thank-you-container{
@@ -115,6 +121,7 @@ textarea{
 
 .thank-you-message{
     color: white;
+    padding: 2vw 2vw;
 }
 
 .thank-you-title{

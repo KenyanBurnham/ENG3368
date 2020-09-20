@@ -35,11 +35,11 @@
         -->
         <div class="full-content-container" id="submissionContainer">
               <!-- This aside holds all of the form elements-->
-              <aside class="form-section">
+              <aside class="form-section form-overflow">
                   <!--The form -->
-                  <form id="scriptingExerciseForm" class="" action="mailto:kenyan.burnham@ttu.edu?subject=Submission sent from Kenyan\'s Site" method="post" enctype="multipart/form-data" onsubmit="thankYou();">
-                        <h1>Submit a Digital Artifact</h1>
-                        <small>Submit an image URL that can be added into our digital artifact database.</small><br><br>
+                  <form id="scriptingExerciseForm" action="mailto:kenyan.burnham@ttu.edu?subject=Submission%20sent%20from%20Kenyan&rsquo;s%20Site&body=Thank%20you%20fname%0lname%20for%20your%20submission?" method="post" enctype="multipart/form-data" onsubmit="thankYou();">
+                        <h1 class="form-title">Submit a Digital Artifact</h1>
+                        <small>Submit an image URL to our digital artifact database.</small><br><br>
                         <hr>
                         <!-- This fieldset contains the submitter's information for follow-up-->
                         <fieldset>
@@ -60,7 +60,7 @@
                             <input type="url" id="imageHostedInput" class="inputs" name="hostedImage" placeholder="image.url" required></input><input type="button" id="sampleURLForSubmission" class="button-style button-sample" name="exampleValueForImage" data-sample-url="https://kenyanburnham.github.io/ENG3368/images/lh-logo.png" value="Use Sample URL"><br><br>
 
                             <label for="categoryForSubmisison">Artifact Category (Optional)</label><br>
-                            <small>This will help our team sort the artifact into distinct sub-groups and pages.</small><br>
+                            <small>This will help our team sort the artifact into distinct sub-groups and pages. Specify your own cby selecting "other".</small><br>
                             <!-- This is the meta information for what category it should be filed under-->
                             <select id="categoryForSubmission" optional class="inputs option-style">
                                 <option value="Esoteric" class="option-style">Esoteric</option>
@@ -139,8 +139,8 @@
         <div class="thank-you-container" id="thankYouContainer" hidden>
             <aside class="thank-you-message">
                 <h1 class="thank-you-title">Thank you for your submission <span id="firstNameGoesHere"></span> <span id="lastNameGoesHere"></span>!</h1>
-                <span >
-                  <img id="imageOutput" class="image-container" src="" alt="This is an image hosted from an external source, content varies.">
+                <span>
+                    <img id="imageOutput" class="image-container" src="" alt="This is an image hosted from an external source, content varies.">
                 </span>
                 <h1 class="thank-you-title">If you would like, you can <a onclick="backToSubmission();" class="resubmit-anchor">submit another &#8594;</a></h1>
 

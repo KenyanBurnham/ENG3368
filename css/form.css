@@ -70,12 +70,20 @@ textarea{
     color: gray;
 }
 
+.form-overflow{
+    overflow-y: scroll;
+}
+
 .form-section{
     background-color: white;
     box-shadow: 10px 10px #E6E6E6;
     float: left;
     padding: 2vw 5vw;
     width: 33%;
+}
+
+.form-title{
+    color: rgb(14,124,123, 1);
 }
 
 .full-content-container{
@@ -97,6 +105,8 @@ textarea{
 }
 
 .image-container{
+    align-items: center;
+    align-content: center;
     background-color: white;
     box-shadow: 10px 10px #E6E6E6;
     padding: 3vw 3vw;

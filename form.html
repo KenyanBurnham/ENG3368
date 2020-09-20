@@ -1,6 +1,13 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <html>
     <head>
+        <!-- Meta-->
+        <meta charset="UTF-8">
+        <meta name="description" content="This site hosts a project for Kenyan Burnham/'s English 3368 scripting project.">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Forms">
+        <meta name="author" content="Kenyan Burnham">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>Kenyan Burnham's Scripting Exercise 1</title>
         <!-- Enterprise fonts-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -69,7 +76,6 @@
                                 <option value="Meme" class="option-style">Meme</option>
                                 <option value="Other" class="option-style">Other</option>
                             </select><br>
-                            <!-- TODO: Make sure that this funcitonality is scripted -->
                             <!--This is if they user selects Other -->
                             <textarea id="textAreaForOther" name="name" rows="4" cols="40" placeholder="Please specify if 'Other' selected." hidden optional></textarea>
                         </fieldset>
@@ -231,6 +237,9 @@
 
                 //reset the daiabled attribute for the submit button
                 submitButton.disabled = true;
+
+                //reset hiding the textArea
+                let textAreaForHiddenReset = document.getElementById("textAreaForOther").hidden = "true";
             }
         </script>
 

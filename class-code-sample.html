@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+<TITLE>Basic form</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1>SAMPLE SURVEY</H1>
+<FORM ACTION="mailto:craig.baehr@ttu.edu" ENCTYPE="text/plain" METHOD="POST">
+
+<FIELDSET>
+<LEGEND>Basic Information</LEGEND>
+
+<H4>Enter your name: </H4>
+<INPUT TYPE="TEXT" SIZE="40" MAXLENGTH="40" />
+
+<H4>Describe yourself: </H4>
+<TEXTAREA ROWS="5" COLS="40">
+Type your response here.
+</TEXTAREA>
+
+<H4>Preferred method of contact</H4>
+<input type="radio" name="contact" value="Email">Email</input>
+<input type="radio" name="contact" value="Phone">Phone</input>
+
+<h4>Which of the following hobbies do you enjoy?</h4>
+<input type="checkbox" name="hobbies" value="Running">Running</input>
+<input type="checkbox" name="hobbies" value="Squatting">Squatting</input>
+
+<h4>What is your favorite color?</h4>
+<input type="color" name="favoriteColor" value="#007bff"></input>
+
+</FIELDSET/><BR/>
+
+<INPUT TYPE="RESET" VALUE="CLEAR RESPONSES" />
+
+<BR/>
+
+<INPUT TYPE="SUBMIT" VALUE="SEND RESPONSES" />
+
+</FORM>
+
+</BODY>
+</HTML>

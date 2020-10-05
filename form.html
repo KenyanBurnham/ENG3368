@@ -3,35 +3,45 @@
     <head>
         <!-- Meta-->
         <meta charset="UTF-8">
-        <meta name="description" content="This site hosts a project for Kenyan Burnham/'s English 3368 scripting project.">
+        <meta name="description" content="This site hosts a project for Kenyan Burnham/'s English 3368 scripting project. This project is an HTML form that submits to email.">
         <meta name="keywords" content="HTML, CSS, JavaScript, Forms">
         <meta name="author" content="Kenyan Burnham">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kenyan Burnham's Scripting Exercise 1</title>
+        <title>Kenyan Burnham's Scripting Exercise 1: HTML</title>
     </head>
     <body>
         <!--
             Dr. Baehr,
 
-            When inspecting this, you will find a sleu of files in the
-            filesystem, these files are all related to the profile assignment.
             I've used GitHub pages to host the files so that they can be brought
-            into the wix-site as an iframe or as an individual page.
+            into the Wix-site as an iframe or as an individual page. This page
+            is displayed as an individual page.
 
-            The only files that relate to this project are the following:
-            - form.html
-
-            I've left the javascript in-text so that's it's easier for
-            you to see how I'm adding the behavior.
+            I've left the JavaScript in-text so that's it's easier for
+            you to see how I'm adding interactive behavior; which I know isn't
+            part of the assignment, but I had fun doing it.
 
             CONCEPT
-            I thought it would be fun to make an visual/digital archive of some sort,
-            so I have written this form to take in information for a visual/digital archive.
+            I thought it would be fun to make an visual/digital archive of some
+            sort, so I have written this form to take in information for a visual
+            /digital archive.
 
-            Originally, I had envisioned hosting the images myself but I decided against it after
-            working with several cloud APIs and trying to learn the HTTP protocol library.
-            I determined that this was past the scope of the project and pushed the limits of my knowledge of server-side JavaScript.
-            In the future, it will be fun to try and make this a reality.
+            Originally, I had envisioned hosting the images myself but I decided
+            against it after working with several cloud APIs and trying to learn
+            the HTTP protocol library. I determined that this was past the scope
+            of the project and pushed the limits of my knowledge of server-side
+            JavaScript.
+
+            In the future, it will be fun to try and make that a reality.
+            In the meant-time, I'll use image URLs from already hosted images.
+            I've encoded the form in plain-text so that it wll display neatly
+            in the email.
+
+            Addiitionally, I do mess with one style property so that I can give
+            a confirmation that the user color was selected and will be used in
+            the digital archive.
+
+            Let me know if you have questions, comments, or concerns.
 
             - Kenyan
         -->
@@ -39,120 +49,128 @@
               <!-- This aside holds all of the form elements-->
               <aside class="form-section form-overflow">
                   <!--The form -->
-                  <form id="scriptingExerciseForm" action="mailto:kenyan.burnham@ttu.edu?subject=Submission%20sent%20from%20Kenyan&rsquo;s%20Site&body=Thank%20you%20fname%0lname%20for%20your%20submission?" method="post" enctype="multipart/form-data" onsubmit="thankYou();">
-                        <h1 class="form-title">Submit a Digital Artifact</h1>
-                        <small>Submit an image URL to our digital artifact database.</small><br><br>
+                  <form id="scriptingExerciseForm" action="mailto:kenyan.burnham@ttu.edu?subject=Digital%20artifact%20submission%20sent%20from%20ENGL3368&rsquo;s%20Digital%20Archive%20Site&body=Thank%20you%20firstName%20lastName%20for%20your%20submission" method="post" enctype="text/plain" onsubmit="thankYou();">
+                        <h1 class="form-title">The ENGL3368 Digital Artifact Archive</h1>
                         <hr>
-                        <!-- This fieldset contains the submitter's information for follow-up-->
+                        <h4>Welcome to the English 3368 digital artifact database.</h4>
+                        <p>Our hand-crafted database houses digital curiosities and curations that digital archivists are interested in preserving for future generations of internet scholarship and research.</p>
+                        <p>Although our database is currently not exhibiting artifiacts for public view, <em> we are still accepting submissions</em> to our digital artifact database.</p>
+                        <br>
+                        <hr>
+                        <br>
+                        <!-- This fieldset, contains the entire form-->
                         <fieldset>
-                            <!--First Name-->
-                            <label for="fname">Name</label><br>
-                            <input type="text" id="fname" class="inputs" name="fname" placeholder="First" required> &nbsp; &nbsp;
-                            <!--Last Name-->
-                            <input type="text" id="lname" class="inputs" name="lname" placeholder="Last" required><br><br>
-                            <!-- Email-->
-                            <label for="submitterEmail">Email</label><br>
-                            <input type="email" id="emailInput" class="inputs" name="submitterEmail" placeholder="your@email.com" required><br>
-                        </fieldset>
+                            <!-- This fieldset contains the submitter's information for follow-up-->
+                            <fieldset>
+                                <legend><b>Submitter Information</b></legend>
+                                <!--First Name-->
+                                <label for="fname">Name</label><br>
+                                <input type="text" id="fname" class="inputs" name="firstName" placeholder="First" required> &nbsp; &nbsp;
+                                <!--Last Name-->
+                                <input type="text" id="lname" class="inputs" name="lastName" placeholder="Last" required><br><br>
+                                <!-- Email-->
+                                <label for="submitterEmail">Email</label><br>
+                                <input type="email" id="emailInput" class="inputs" name="submitterEmail" placeholder="your@email.com" required><br>
+                            </fieldset>
+                            <br>
+                            <!-- This fieldset contains an optional select for organizing the archive-->
+                            <fieldset>
+                                <legend><b>Digital Artifact Information</b></legend>
+                                <!-- This input specifies an image URL already hsoted somewhere else -->
+                                <label for="hostedImage">Image Url</label><br>
+                                <input type="url" id="imageHostedInput" class="inputs" name="hostedImage" placeholder="image.url" required></input>&nbsp; &nbsp; &nbsp;<input type="button" id="sampleURLForSubmission" class="button-style button-sample" name="exampleValueForImage" data-sample-url="https://kenyanburnham.github.io/ENG3368/images/lh-logo.png" value="Use Sample URL"><br><br>
 
-                        <!-- This fieldset contains an optional select for organizing the archive-->
-                        <fieldset>
-                            <!-- This input specifies an image URL already hsoted somewhere else -->
-                            <label for="hostedImage">Image Url</label><br>
-                            <input type="url" id="imageHostedInput" class="inputs" name="hostedImage" placeholder="image.url" required></input>&nbsp; &nbsp; &nbsp;<input type="button" id="sampleURLForSubmission" class="button-style button-sample" name="exampleValueForImage" data-sample-url="https://kenyanburnham.github.io/ENG3368/images/lh-logo.png" value="Use Sample URL"><br><br>
-
-                            <label for="categoryForSubmisison">Artifact Category (Optional)</label><br>
-                            <small>This will help our team sort the artifact into distinct sub-groups and pages. Specify your own category by selecting "other".</small><br>
-                            <!-- This is the meta information for what category it should be filed under-->
-                            <select id="categoryForSubmission" optional class="inputs option-style">
-                                <option value="Esoteric" class="option-style">Esoteric</option>
-                                <option value="Ludic" class="option-style">Ludic</option>
-                                <option value="Useful" class="option-style">Useful</option>
-                                <option value="Meme" class="option-style">Meme</option>
-                                <option value="Other" class="option-style">Other</option>
-                            </select><br>
-                            <!--This is if they user selects Other -->
-                            <textarea id="textAreaForOther" name="name" rows="4" cols="40" placeholder="Please specify if 'Other' selected." hidden optional></textarea>
-                        </fieldset>
-
-                        <!-- Script for the programmatic behavior of the "other" option-->
-                        <script type="text/javascript">
-                            //Get the data list element for value evaluation
-                            let select = document.getElementById("categoryForSubmission");
-                            //get the textArea for resetting hidden status and behavior
-                            let textAreaForOther = document.getElementById('textAreaForOther');
-                            //Add listener event for when the value changes
-                            select.onchange = function(){
-                                //reset the textArea behavior
-                                textAreaForOther.hidden = true;
-                                // TODO: Remove test console
-                                console.log(select.value);
-                                // add a case to toggle the hidden attribute for when Other is selected
-                                if (select.value == "Other") {
-                                    textAreaForOther.hidden = false;
-                                } else if (select.value != "Other") {
-                                    textAreaForOther.hidden = true;
-                                }
-                            }
-
-                            //This allows for a sample injection of an already hosted image
-                            let sampleurlForSubmission = document.getElementById('sampleURLForSubmission');
-                            //this is the onclick fucntion for injecting the url into the input field
-                            sampleurlForSubmission.onclick = function (){
-                                //get the sample url
-                                let urlForSample = sampleurlForSubmission.getAttribute("data-sample-url");
-                                //place it in the input box
-                                let imageHostedInput = document.getElementById('imageHostedInput');
-                                imageHostedInput.value = urlForSample;
-                                // TODO: Add the disable button functionality
-                            }
-
-                        </script>
-
-                        <!-- This is the submission button -->
-                        <fieldset>
-                            <hr>
-                            <!-- This is the submission button -->
-                            <input type="submit" class="button-style button-submit-disabled" name="submitButton" value="Submit" disabled id="submitButton"></input>
-                            <!-- This just an optional reset button-->
-                            <input type="reset" class="button-style button-reset" name="clearButton" value="Reset" id="clearButton">
-                        </fieldset>
-
-                        <script type="text/javascript">
-                              //get the reset button element
-                              let clearButton = document.getElementById("clearButton");
-                              // When clicked, ensure that the textArea box is reset
-                              //Since it doesn't natively do so
-                              clearButton.onclick = function(){
-                                  //get the textArea input
-                                  let textAreaForOtherForReset = document.getElementById('textAreaForOther');
-                                  //Clear the contents
-                                  textAreaForOtherForReset.innerHTML = "";
-                                  //Then hide the box
-                                  textAreaForOtherForReset.hidden = true;
-                              }
-                        </script>
-
+                                <label for="categoryForSubmisison">Artifact Category (Optional)</label><br>
+                                <small>This will help our team sort the artifact into distinct sub-groups and pages. Specify your own category by selecting <i>"Other"</i>.</small><br>
+                                <!-- This is the meta information for what category it should be filed under-->
+                                <br>
+                                <select id="categoryForSubmission" optional class="inputs option-style" name="submissionCategory">
+                                    <option value="Esoteric" class="option-style">Esoteric</option>
+                                    <option value="Ludic" class="option-style">Ludic</option>
+                                    <option value="Useful" class="option-style">Useful</option>
+                                    <option value="Meme" class="option-style">Meme</option>
+                                    <option value="Other" class="option-style">Other</option>
+                                </select><br><br>
+                                <!--This is if they user selects Other -->
+                                <textarea id="textAreaForOther" name="otherCategory" rows="4" cols="40" placeholder="Please specify if 'Other' selected." hidden optional></textarea>
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                <legend><b>Customize Submission</b></legend>
+                                <small>If you would like to customize your submission with a particular background color, you can select the color below. The default color will be blue.</small>
+                                <br><br>
+                                <input id="colorOutput" type="color" name="customColor" value="#007bff">
+                            </fieldset>
+                                <br>
+                                <!-- This is the submission button -->
+                                &nbsp; <input type="submit" class="button-style button-submit-disabled" value="Submit" disabled id="submitButton"></input>
+                                <!-- This just an optional reset button-->
+                                <input type="reset" class="button-style button-reset" value="Reset" id="clearButton">
+                            </fieldset>
                   </form>
               </aside>
         </div>
 
         <div class="thank-you-container" id="thankYouContainer" hidden>
-            <aside class="thank-you-message">
-                <h1 class="thank-you-title">Thank you for your submission <span id="firstNameGoesHere"></span> <span id="lastNameGoesHere"></span>!</h1>
-                <span>
-                    <img id="imageOutput" class="image-container" src="" alt="This is an image hosted from an external source, content varies.">
+            <section class="thank-you-message">
+                <h1 class="form-title">The ENGL3368 Digital Artifact Archive</h1>
+                <h4 class="thank-you-title">Thank you for your submission <span id="firstNameGoesHere"></span> <span id="lastNameGoesHere"></span>!</h4>
+                <span id='imageContainer'>
+                    <img id="imageOutput" class="image-container" src="" alt="This is an image hosted from an external source, content varies based on the submission.">
                 </span>
-                <h1 class="thank-you-title">If you would like, you can <a onclick="backToSubmission();" class="resubmit-anchor">submit another &#8594;</a></h1>
-
-            </aside>
+                <h4 class="thank-you-title">If you would like, you can <u><a onclick="backToSubmission();" class="resubmit-anchor">submit a new artifact.</a></ul></h4>
+            </section>
         </div>
 
+        <!-- All this script does is add some form regulation and and toggling
+        functionality. Additionally, I've added some submission confirmation
+        behavior and some manual input clearing form inputs that didn't behave
+        properly. It might look like a lot, but really it doesn't do all that much.-->
         <script type="text/javascript">
-            //get the submit button for programatic change of the file
-            let submitButton = document.getElementById('submitButton');
-            let form = document.getElementById("scriptingExerciseForm");
-            //Set the disabled button once
+            //Get the data list element for value evaluation
+            let select = document.getElementById("categoryForSubmission");
+            //get the textArea for resetting hidden status and behavior
+            let textAreaForOther = document.getElementById('textAreaForOther');
+            //Add listener event for when the value changes
+            select.onchange = function(){
+                //reset the textArea behavior
+                textAreaForOther.hidden = true;
+                // add a case to toggle the hidden attribute for when Other is selected
+                if (select.value == "Other") {
+                    textAreaForOther.hidden = false;
+                } else if (select.value != "Other") {
+                    textAreaForOther.hidden = true;
+                }
+            }
+
+            //This allows for a sample injection of an already hosted image
+            let sampleurlForSubmission = document.getElementById('sampleURLForSubmission');
+            //this is the onclick fucntion for injecting the url into the input field
+            sampleurlForSubmission.onclick = function (){
+                //get the sample url
+                let urlForSample = sampleurlForSubmission.getAttribute("data-sample-url");
+                //place it in the input box
+                let imageHostedInput = document.getElementById('imageHostedInput');
+                imageHostedInput.value = urlForSample;
+            }
+
+                //get the reset button element
+                let clearButton = document.getElementById("clearButton");
+                // When clicked, ensure that the textArea box is reset
+                //Since it doesn't natively do so
+                clearButton.onclick = function(){
+                    //get the textArea input
+                    let textAreaForOtherForReset = document.getElementById('textAreaForOther');
+                    //Clear the contents
+                    textAreaForOtherForReset.innerHTML = "";
+                    //Then hide the box
+                    textAreaForOtherForReset.hidden = true;
+                }
+
+                //get the submit button for programatic change of the file
+                let submitButton = document.getElementById('submitButton');
+                let form = document.getElementById("scriptingExerciseForm");
+                //Set the disabled button once
 
             //set a change listener that polls for form changes to see if the conditions are met to submit
             form.onchange = function(){
@@ -196,11 +214,19 @@
                 let fNameOutput = document.getElementById('firstNameGoesHere');
                 let lNameOutput = document.getElementById('lastNameGoesHere');
                 let imageOutput = document.getElementById('imageOutput');
+                //grad the elements that will host the color confirmation
+                let imageContainer = document.getElementById("imageContainer");
+                let colorInput = document.getElementById('colorOutput');
 
                 //assign the names, then do the hidden attirbute changes
                 fNameOutput.innerHTML = fNameInput.value;
                 lNameOutput.innerHTML = lNameInput.value;
                 imageOutput.src = imageToDisplayForThankYou.value;
+
+                //Although CSS is not supposed to be in this project,
+                //I think it'd be cool to show some confirmation on the submission page
+                imageOutput.style = "border: 5px solid " + colorInput.value + ";";
+                //Fun Fact: The output will always be in hexidecimal, no matter how you select the color
 
                 //get the submission container and hide it
                 let submissionContainer = document.getElementById("submissionContainer");
@@ -237,6 +263,5 @@
                 let textAreaForHiddenReset = document.getElementById("textAreaForOther").hidden = "true";
             }
         </script>
-
     </body>
 </html>

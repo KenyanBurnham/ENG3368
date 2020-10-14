@@ -1,0 +1,45 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+html, body, html * {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: black;
+    margin: 0px;
+    z-index: 0;
+}
+
+.space {
+    background: radial-gradient(orange, rgb(46, 41, 78, .8), rgb(46, 41, 78, .9), #2E294E, #01200F, black);
+    height: 300vh;
+    width: 300vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+}
+
+.planet{
+    background: linear-gradient(to top left, red, yellow);
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px #444444;
+    position: absolute;
+    left: 17vw;
+    height: 100vw;
+    top: 25vw;
+    width: 100vw;
+    padding: 35vw;
+    z-index: 100;
+}
+
+.paper{
+    position: absolute;
+    background: linear-gradient(to bottom right, #F7F7FF, #EEEEFF);
+    left: 35vw;
+    top: 35vw;
+    width: 60vw;
+    height: 120vw;
+    z-index: 300;
+    box-shadow: 2px 2px 2px gray;
+    padding: 10px 15px;
+}

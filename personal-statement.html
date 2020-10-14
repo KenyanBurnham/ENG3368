@@ -24,18 +24,109 @@
         <!-- Top section: Introduces the context of the page-->
 
         <section class="space">
+            <div class="rocket"></div>
+            <div class="floating-text-container">
+                <h1 class="floating-text">Out of this world design.</h1>
+            </div>
             <div class="paper">
-                <h1>Your mission, should you choose to accept it.</h1>
+                <h1 class="paper-header">Your mission, should you choose to accept it.</h1>
+                <hr id="stylize-hr">
                 <br>
-                <p>
-                  Kenyan Burnham is a develop from Dallas texas. 
+                <p class="paper-body">
+                  <b class="highlight">Kenyan Burnham</b> is a develop from Dallas texas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce felis dolor, finibus vitae lectus vitae, commodo pellentesque eros. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean nibh leo, faucibus vitae lacus porta, ultricies ornare erat. Praesent sit amet nunc id ante placerat dignissim. Etiam interdum ac purus nec venenatis. Nam augue nunc, lacinia et posuere non, condimentum a dui. Duis tristique mi mi. Donec et accumsan tellus.
+                  <br><br>
+                  Aliquam cursus cursus nisl, ut hendrerit massa lobortis sed. Nulla condimentum diam quis dui viverra malesuada ut in lacus. In mauris elit, finibus a feugiat a, maximus ac tortor. Integer ac dignissim felis, nec euismod est. Integer vehicula nec dolor non iaculis. Phasellus facilisis convallis mauris a imperdiet. Sed sodales vestibulum ipsum.
+                  <br><br>
+                  Mauris et ex velit. Cras mollis nec turpis sit amet ultricies. Nulla facilisi. Sed dictum lacus a lacus volutpat gravida vitae ac leo. Suspendisse vel nulla enim. Morbi scelerisque nunc in lacus ullamcorper luctus. Pellentesque orci eros, luctus in scelerisque ut, scelerisque ac velit. Etiam et massa luctus sem efficitur aliquet. Vivamus ac mi quam.
+                  <br><br>
+                  Nunc tempus diam id hendrerit tempor. Fusce vitae vulputate ex, et sodales nulla. Pellentesque sagittis eros nulla, eget ultricies ex ornare vitae. Sed vulputate semper egestas. Maecenas volutpat justo massa, et viverra neque interdum sit amet. Vestibulum porta sem sollicitudin pellentesque hendrerit. Etiam commodo sapien felis, vel efficitur arcu scelerisque sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut sagittis magna a dolor tristique vulputate. Etiam sit amet quam vel nisl mollis aliquet in.
+
                 </p>
             </div>
-            <section>
-                <div class="planet">
-                    &nbsp;
-                </div>
-            </section>
+            <div class="mars"></div>
+            <div class="neptune"></div>
+
+            <script type="text/javascript">
+              /**
+              j4posh's project "Random Star Generator" on codepen.io
+              https://codepen.io/japosh34/pen/wZyJWM
+              **/
+              var space = document.querySelector('.space');
+
+              var minStarSize = 1;
+              var maxStarSize = 3;
+
+              var minStarAlpha = 0.5;
+              var maxStarAlpha = 1.1;
+
+              function createStars() {
+
+              	var spaceWidth  = space.clientWidth;
+              	var spaceHeight = space.clientHeight;
+
+              	var starsX = [];
+              	var starsY = [];
+
+              	var starsNum = spaceWidth / 2 + spaceHeight / 2;
+
+              	function getRandomFloat(min, max) {
+              		return Math.random() * (max - min) + min;
+              	}
+
+              	function getRandomInt(min, max) {
+              		return Math.floor(Math.random() * (max - min + 1)) + min;
+              	}
+
+                //my change
+                function addStarGlow(){
+                    this.style.backgroundColor = "red";
+                    console.log("recieved");
+                }
+
+              	function addStar(x, y, size, alpha) {
+              		var star = document.createElement('div');
+
+                  star.id = "star" + x + y + "";
+
+              		star.classList.add('star');
+
+              		star.style.width = size + 'px';
+              		star.style.height = size + 'px';
+
+              		star.style.left = x + 'px';
+              		star.style.top =  y + 'px';
+
+              		star.style.opacity = alpha;
+
+              		space.appendChild(star);
+                  //My change
+                  //document.getElementById("star" + x + y + "").addEventListener("mouseover", addStarGlow);
+              	}
+
+              	for(var i = 0; i < starsNum; i++) {
+              		starsX[i] = getRandomInt(1, spaceWidth - 1);
+              		starsY[i] = getRandomInt(1, spaceHeight - 1);
+              		addStar(starsX[i], starsY[i], getRandomInt(minStarSize, maxStarSize),
+              									  getRandomFloat(minStarAlpha, maxStarAlpha));
+              	}
+
+              }
+              /**
+              space.addEventListener('click', function() {
+
+              	var stars = space.querySelectorAll('.star');
+
+              	for(var i = 0; i < stars.length-1; i++) {
+              		stars[i].remove();
+              	}
+
+              	createStars();
+              });
+              **/
+
+              createStars();
+
+            </script>
 
 
         </section>

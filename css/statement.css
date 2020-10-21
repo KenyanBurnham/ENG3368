@@ -1,6 +1,10 @@
+/*
+1920x1200 is Dr. Baehr's screen resolution
+*/
+
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
 html, body, html * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Gill Sans', sans-serif;
 }
 
 body {
@@ -10,22 +14,31 @@ body {
     z-index: 0;
 }
 
-.space {
+.space-background {
     background: radial-gradient(rgb(46, 41, 78, .8), rgb(46, 41, 78, .9), #2E294E, #01200F, black);
     height: 350%;
     width: 300vh;
     position: absolute;
     left: 0;
     right: 0;
+    z-index: 50;
 
 }
 
-.space .star {
+.space-background .star {
 	position: absolute;
 	border-radius: 50%;
 	background-color: #fff;
 	pointer-events: none;
 	box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Normalizes the container that sits above the "space container" */
+.space-container{
+    height: 350%;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
 }
 
 /**
@@ -36,12 +49,12 @@ body {
 .mars{
     background: url("../images/mars-cartoon.gif");
     background-repeat: no-repeat;
-    width:300px;
-    height:300px;
-    position:absolute;
-    border-radius:50%;
-    left:50%;
-    top:10%;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 50%;
+    left: 80%;
+    top: 15%;
     z-index: 250;
 }
 /**
@@ -53,12 +66,12 @@ body {
     background: url("../images/neptune-cartoon.gif");
     background-repeat: no-repeat;
     background-size: 500px 500px;
-    width:500px;
-    height:500px;
-    position:absolute;
-    border-radius:50%;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border-radius: 50%;
     left:5%;
-    top:56%;
+    top:34%;
     z-index: 250;
 }
 
@@ -77,9 +90,9 @@ body {
 .paper{
     position: absolute;
     background: linear-gradient(to bottom right, #D8DBE2, #F7F7FF, #D8DBE2);
-    left: 30vw;
+    left: 25vw;
     top: 35vw;
-    width: 50vw;
+    width: 50%;
     z-index: 300;
     box-shadow: 2px 2px 2px gray;
     padding: 10px 15px;
@@ -88,7 +101,7 @@ body {
 .paper-header{
     text-align: left;
     font-size: 2.5em;
-    color: #58A4B0;
+    color: #007bff;
     margin-left: 3vw;
     margin-right: 3vw;
 }
@@ -102,6 +115,49 @@ body {
     line-height: 1.5;
 }
 
+.hole-punch{
+    float: left;
+    display: inline;
+    width: 5%;
+}
+
+.cut-out{
+    display: block;
+    background-image: url("../images/hole.png");
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.cut-out-top{
+    background-position: left;
+    margin-top: 25px;
+}
+
+.cut-out-middle{
+    background-position: center;
+    margin-top: 250px;
+}
+
+.cut-out-different{
+    background-position: right;
+}
+
+.cut-out-small-star{
+    background-position: left;
+}
+
+.paper-content {
+    float: left;
+    display: inline;
+    width: 95%;
+}
+
+.tear-here{
+    border-top: 4px dotted grey;
+}
+
 .highlight{
     color: black;
     opacity: .86;
@@ -111,10 +167,9 @@ body {
     float: left;
     top: 5vw;
     z-index: 400;
-    text-align: left;
-    position: absolute;
-    padding-left: 20%;
-    width: 100vw;
+    text-align: center;
+    position: relative;
+    width: 100%;
 }
 
 .floating-text{
@@ -129,12 +184,12 @@ body {
     text-shadow: 2px 4px #58A4B0;
 }
 
-.surface{
-    width: 100vw;
-    height: 15%;
-    float: left;
-    position: absolute;
-    bottom: 0%;
+.call-to-action{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    position: relative;
+    top: 55%;
     z-index: 50;
     align-items: center;
     text-align: center;
@@ -144,7 +199,6 @@ body {
     color: white;
     font-size: 3em;
     text-shadow: 1px 2px #58A4B0;
-    position: absolute;
 }
 
 #stylize-hr{
@@ -180,7 +234,7 @@ body {
    box-shadow: 0px 10px 0 0 #BA0000, 0px 20px 0 0 #BA0000;
    transition-property: margin-top, box-shadow;
    transition-duration: 0.2s;
-   left: 28%;
+   left: 40%;
 }
 
 .button-button:active {
@@ -200,5 +254,5 @@ body {
    color: #777777;
    background-color: #BABABA;
    box-shadow: 0px 7px 0 0 currentcolor, 0px 15px 0 0 currentcolor;
-   left: 28%;
+   left: 40%;
 }

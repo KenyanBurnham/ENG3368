@@ -8,87 +8,141 @@
         <meta name="author" content="Kenyan Burnham">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kenyan Burnham's Scripting Exercise 2: CSS</title>
-
+        <!--
+          The stylesheet below this is filled with secondary CSS content from
+          other developers. I consider this as supplemental.
+        -->
+        <link rel="stylesheet" href="css/secondary.css">
+        <!--
+          A majority of the styles are in statement.css, all of the styling in
+          this file are my own.
+        -->
         <link rel="stylesheet" href="css/statement.css">
     </head>
     <body>
         <!--
             Dr. Baehr,
 
-            My goal in this project is not to use any JS but to still make an
-            interactive personal statement.
+            My goal in this project was not to realy too much on JS, or at least
+            not let the JS "outshine" the CSS work.
+
+            I decided I would go with a space theme for this assignment. Though
+            not realized in any of my other work, I do enjoy science and space
+            themes and I decided that would be my creative project.
+
+            I won't explain why I have a space suit, but I knew from the get-go
+            that I needed to have a photo of myself in the spacesuit somehow.
+
+            In retrospect, the falling motion might be too distracting,
+            but I couldn't resist.
+
+            Enjoy.
 
             - Kenyan
         -->
 
-        <!-- This section containds the background with programmatic stars-->
+        <!-- This section contains the background with programmatic stars-->
         <section class="space-background">
             &nbsp;
         </section>
+
         <!-- This container contains the active alements that are full of content-->
         <section class="space-container">
+
+            <!-- This is where my eye-catching text is-->
             <header class="floating-text-container">
                 <h1 class="floating-text">Kenyan Burnham</h1>
-                <h3 class="floating-subtext">An out of this world designer.</h3>
+                <h3 class="floating-subtext">An out of this world developer.</h3>
             </header>
-            <!-- This article contains the bulk of the contaent, where I make my "sales pitch"/ "elevator pitch"-->
+
+            <!-- This article contains the bulk of the content, where I make my "sales pitch"/ "elevator pitch"-->
             <article class="paper">
-                <aside class="hole-punch">
-                    <div class="cut-out cut-out-top">
-                        &nbsp;
-                    </div>
-                    <div class="cut-out cut-out-middle">
-                        &nbsp;
-                    </div>
-                    <div class="cut-out cut-out-middle cut-out-different">
-                        &nbsp;
-                    </div>
-                    <div class="cut-out cut-out-middle">
-                        &nbsp;
-                    </div>
-                    <div class="cut-out cut-out-middle cut-out-small-star">
-                        &nbsp;
-                    </div>
-                    <div class="cut-out cut-out-middle cut-out-different">
-                        &nbsp;
-                    </div>
-                    <div class="cut-out cut-out-middle">
-                        &nbsp;
-                    </div>
-                </aside>
                 <section class="paper-content">
-                    <h1 class="paper-header">Your mission, should you choose to accept it.</h1>
-                    <hr id="stylize-hr">
-                    <br>
-                    <p class="paper-body">
-                      <b class="highlight">Kenyan Burnham</b> is a develop from Dallas texas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce felis dolor, finibus vitae lectus vitae, commodo pellentesque eros. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean nibh leo, faucibus vitae lacus porta, ultricies ornare erat. Praesent sit amet nunc id ante placerat dignissim. Etiam interdum ac purus nec venenatis. Nam     augue nunc, lacinia et posuere non, condimentum a dui. Duis tristique mi mi. Donec et accumsan tellus.
-                    </p>
-                    <hr class="tear-here"> <br>
-                    <p class="paper-body">
-                        Aliquam cursus cursus nisl, ut hendrerit massa lobortis sed. Nulla condimentum diam quis dui viverra malesuada ut in lacus. In mauris elit, finibus a feugiat a, maximus ac tortor. Integer ac dignissim felis, nec euismod est. Integer vehicula nec dolor non iaculis. Phasellus facilisis convallis mauris a imperdiet. Sed sodales vestibulum ipsum.
-                        Mauris et ex velit. Cras mollis nec turpis sit amet ultricies. Nulla facilisi. Sed dictum lacus a lacus volutpat gravida vitae ac leo. Suspendisse vel nulla enim. Morbi scelerisque nunc in lacus ullamcorper luctus. Pellentesque orci eros, luctus in scelerisque ut, scelerisque ac velit. Etiam et massa luctus sem efficitur aliquet. Vivamus ac mi quam.
-                    </p>
-                    <hr class="tear-here"> <br>
-                    <p class="paper-body">
-                        Nunc tempus diam id hendrerit tempor. Fusce vitae vulputate ex, et sodales nulla. Pellentesque sagittis eros nulla, eget ultricies ex ornare vitae. Sed vulputate semper egestas. Maecenas volutpat justo massa, et viverra neque interdum sit amet. Vestibulum porta sem sollicitudin pellentesque hendrerit. Etiam commodo sapien felis, vel efficitur arcu scelerisque sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut sagittis magna a dolor tristique vulputate. Etiam sit amet quam vel nisl mollis aliquet in.
-                    </p>
+                    <aside class="paper-hole-punch">
+                          <div class="paper-cut-out paper-cut-out-top">
+                              &nbsp;
+                          </div>
+                          <div class="paper-cut-out paper-cut-out-middle">
+                              &nbsp;
+                          </div>
+                          <div class="paper-cut-out paper-cut-out-middle paper-cut-out-different">
+                              &nbsp;
+                          </div>
+                    </aside>
+                    <aside class="paper-right">
+                        <h1 class="paper-header">Mission #01: Hire Kenyan Burnham for Web Development Project.</h1>
+                        <br>
+                        <p class="paper-body">
+                          <b class="highlight">Kenyan Burnham</b> is a developer from Dallas, TX, with over five years of website and webapp development experience
+                          in the software startup industry, higher education, as well as independent development and contract work.
+                        </p>
+                        <p class="paper-body">
+                            Kenyan is a self-taught developer, teaching himself HTML, CSS, and JavaScript while working for a software startup in 2015.
+                            During this period Kenyan managed the Front End Design team, learned many media manipulation tools such as Adobe Photoshop and GIMP, as well, Kenyan managed a media designer.
+                        </p>
+                        <p class="paper-body">
+                            Professionally, Kenyan has designed prototypes for <a href="https://kenyandburnham.wixsite.com/website/fabricscholar-project" target="_blank">online digital repositories</a>,
+                            <a href="https://kenyanburnham.github.io/ENG3368/pspe.html" target="_blank">higher education programs</a>, as well as <a href="https://kenyandburnham.wixsite.com/website/it-s-your-option-project" target="_blank">independent algorithm design</a> for board game developers.
+                        </p>
+                    </aside>
                 </section>
 
+                <hr class="paper-tear-here"> <br>
+
+                <section class="paper-content">
+                    <aside class="paper-hole-punch">
+                          <div class="paper-cut-out paper-cut-out-small-star paper-cut-out-match-top">
+                              &nbsp;
+                          </div>
+                          <div class="paper-cut-out paper-cut-out-middle">
+                              &nbsp;
+                          </div>
+                          <div class="paper-cut-out paper-cut-out-middle paper-cut-out-different">
+                              &nbsp;
+                          </div>
+                    </aside>
+                    <aside class="paper-right">
+                        <p class="paper-body">
+                            While obtaining a Bachelor's degree in Technical Communication and Rhetoric at Texas Tech University, Kenyan developed and designed many web projects for his course work, including:
+                        </p>
+                        <ul class="paper-unordered-list">
+                            <li><a href="https://kenyan33.wixsite.com/wethemeeple" target="_blank">We the Meeple</a>: An online resource for board game communities during the Covid-19 pandemic.</li>
+                            <li><a href="https://kenyandburnham.wixsite.com/website/copy-of-fabricscholar-project" target="_blank">HTML Scripting Project 1</a>: A pure HTML mailto form with a dash of JavaScript.</li>
+                            <li><a href="https://kenyanburnham.github.io/2311-Revolution360/" target="_blank">Revolution360</a>: A digital marketing campaign for a fictional energy company.</li>
+                        </ul>
+                        <p class="paper-body">
+                            Additionally, Kenyan has persued his own software projects that showcase his talents as a JavaScript developer, such as <a href="https://kenyanburnham.github.io/Readar/" target="_blank">Readar</a>; a readability tool that is currently in development.
+                        </p>
+                        <p class="paper-body">
+                            With the cosmic array of experience that Kenyan has under his belt, Kenyan can design, develop, and edit all web materials needed to launch your product.
+                         </p>
+                         <p class="paper-body">
+                            To learn more about Kenyan Burnham's experience and past work, visit his <a href="https://kenyandburnham.wixsite.com/website">developer profile</a>.
+                         </p>
+                    </aside>
+                </section>
             </article>
+
+            <aside class="kenyan-in-space">
+                &nbsp;
+            </aside>
+
             <!-- This aside just contains a .gif file background-->
             <aside class="mars"></aside>
+
             <!-- This aside just contains a .gif file background-->
             <aside class="neptune"></aside>
+
             <!-- This footer just contains a call-to-action that features a "launch button"-->
-            <footer class="call-to-action">
-                <h3 class="launch-text">Launch your next mission with <span class="differentiate-name">Kenyan Burnham</span>!</h3>
+            <footer class="bottom-call-to-action">
+                <h3 class="bottom-launch-text">Launch your next mission with <span class="differentiate-name">Kenyan Burnham</span>!</h3>
                 <article class="button-container">
                     <aside class="button-gehaeuse"></aside>
-                    <button class="button-button">LAUNCH</button>
+                    <button class="button-button" onclick="window.location.href = 'https://kenyandburnham.wixsite.com/website/contact';">LAUNCH</button>
                 </article>
             </footer>
         </section>
-        <!-- Middle section: includes the personal statement -->
+
         <script type="text/javascript">
           /**
           j4posh's project "Random Star Generator" on codepen.io
@@ -120,12 +174,6 @@
               return Math.floor(Math.random() * (max - min + 1)) + min;
             }
 
-            //my change
-            function addStarGlow(){
-                this.style.backgroundColor = "red";
-                console.log("recieved");
-            }
-
             function addStar(x, y, size, alpha) {
               var star = document.createElement('div');
 
@@ -142,8 +190,6 @@
               star.style.opacity = alpha;
 
               space.appendChild(star);
-              //My change
-              //document.getElementById("star" + x + y + "").addEventListener("mouseover", addStarGlow);
             }
 
             for(var i = 0; i < starsNum; i++) {
@@ -154,20 +200,13 @@
             }
 
           }
-          /**
-          space.addEventListener('click', function() {
-
-            var stars = space.querySelectorAll('.star');
-
-            for(var i = 0; i < stars.length-1; i++) {
-              stars[i].remove();
-            }
-
-            createStars();
-          });
-          **/
 
           createStars();
+
+          //Found this gem from https://css-tricks.com/books/greatest-css-tricks/scroll-animation/
+          window.addEventListener('scroll', () => {
+            document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+          }, false);
 
         </script>
     </body>

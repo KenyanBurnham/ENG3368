@@ -1,0 +1,72 @@
+/*
+  The "space" classes are based on j4posh's project "Random Star Generator" on codepen.io
+  https://codepen.io/japosh34/pen/wZyJWM
+
+  Except the radial background, that was custom-designed after my failed
+  attempts to generate a planet texture. I ended up settling with Krapey's images instead.
+*/
+.space-background {
+    background: radial-gradient(rgb(46, 41, 78, .8), rgb(46, 41, 78, .9), #2E294E, #01200F, black);
+    height: 350%;
+    width: 300vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 50;
+
+}
+
+.space-background .star {
+	position: absolute;
+	border-radius: 50%;
+	background-color: #fff;
+	pointer-events: none;
+	box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/**
+    launch button look
+    https://codepen.io/Der_Meier/pen/ZjNoqM
+**/
+
+.button-button, input[type="submit"], input[type="reset"] {
+   background: none;
+   border: none;
+   padding: 0;
+   font: inherit;
+   cursor: pointer;
+   outline: inherit;
+   margin-left:100px;
+   margin-top:115px;
+   width: 120px;
+   height: 80px;
+   border-radius: 50%;
+   position: absolute;
+   color: white;
+   font-size: 20px;
+   background-color: #FF0000;
+   box-shadow: 0px 10px 0 0 #BA0000, 0px 20px 0 0 #BA0000;
+   transition-property: margin-top, box-shadow;
+   transition-duration: 0.2s;
+   left: 40%;
+}
+
+.button-button:active {
+   color: #D9D9D9;
+   margin-top:125px;
+   background-color: #BA0000;
+   box-shadow: 0px 0px 0 0 #740000, 0px 10px 0 0 #740000;
+}
+
+.button-gehaeuse {
+   margin-left:80px;
+   margin-top:140px;
+   width: 160px;
+   height: 100px;
+   border-radius: 50%;
+   position: absolute;
+   color: #777777;
+   background-color: #BABABA;
+   box-shadow: 0px 7px 0 0 currentcolor, 0px 15px 0 0 currentcolor;
+   left: 40%;
+}

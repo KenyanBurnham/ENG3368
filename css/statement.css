@@ -1,258 +1,252 @@
 /*
-1920x1200 is Dr. Baehr's screen resolution
+  This is my favorite font, so I though I'd include it in most of the project
 */
-
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
 html, body, html * {
-  font-family: 'Roboto', 'Gill Sans', sans-serif;
+    font-family: 'Roboto', 'Gill Sans', sans-serif;
 }
 
+/* =============================================================================
+    Global element styles
+ =============================================================================*/
+
 body {
-    background-color: black;
-    overflow-x: hidden;
+    background-color: #000000;
     margin: 0px;
+    overflow-x: hidden;
     z-index: 0;
 }
 
-.space-background {
-    background: radial-gradient(rgb(46, 41, 78, .8), rgb(46, 41, 78, .9), #2E294E, #01200F, black);
-    height: 350%;
-    width: 300vh;
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 50;
-
+p {
+    color: #373F51;
+    font-size: 1.5em;
+    line-height: 1.5;
+    text-align: left;
 }
 
-.space-background .star {
-	position: absolute;
-	border-radius: 50%;
-	background-color: #fff;
-	pointer-events: none;
-	box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+a {
+    color: #58A4B0;
+    text-decoration: none;
+}
+
+/* =============================================================================
+    Class-level styles
+ =============================================================================*/
+
+ .bottom-call-to-action {
+     align-items: center;
+     height: 15%;
+     position: relative;
+     text-align: center;
+     top: 55%;
+     width: 100%;
+     z-index: 300;
+ }
+
+ .bottom-launch-text {
+     color: white;
+     font-size: 3em;
+     text-shadow: 1px 2px #58A4B0;
+ }
+
+ .button-container {
+     margin-top: 0px;
+ }
+
+ .differentiate-name {
+     text-shadow: 2px 4px #007bff;
+ }
+
+.floating-text-container {
+    float: left;
+    position: relative;
+    text-align: center;
+    top: 5vw;
+    width: 100%;
+    z-index: 400;
+}
+
+.floating-text {
+    color: white;
+    font-size: 6em;
+    text-shadow: 2px 4px #58A4B0;
+}
+
+.floating-subtext {
+    color: white;
+    font-size: 3.5em;
+    text-shadow: 2px 4px #58A4B0;
+}
+
+.highlight {
+    color: #007bff;
+    opacity: .86;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(-45deg);
+  }
+}
+
+.kenyan-in-space {
+    background: url("../images/kenyan-in-space.png");
+    background-repeat: no-repeat;
+    background-size: 1200px 1000px;
+    background-position: center;
+    width: 100vw;
+    height: 120vh;
+    z-index: 275;
+    position: fixed;
+    top: 0px;
+    left: -100px;
+
+    animation: rotate .1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -.1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+
+
+
+
+/*
+ Mars gif by Krapey,
+ https://www.deviantart.com/krapey/art/Mars-Animation-Gif-771243998
+*/
+.mars {
+    background: url("../images/mars-cartoon.gif");
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 300px;
+    left: 80%;
+    position: relative;
+    top: 15%;
+    width: 300px;
+    z-index: 250;
+}
+/*
+ Neptune gif by Krapey,
+ https://www.deviantart.com/krapey/art/Neptune-Animated-Gif-771441568
+*/
+
+.neptune {
+    background: url("../images/neptune-cartoon.gif");
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    border-radius: 50%;
+    height: 500px;
+    left:-10%;
+    position: relative;
+    top:34%;
+    width: 500px;
+    z-index: 250;
+}
+
+.paper {
+    background: linear-gradient(to bottom right, #D8DBE2, #F7F7FF, #D8DBE2);
+    box-shadow: 2px 2px 2px gray;
+    left: 25vw;
+    padding: 10px 15px;
+    position: absolute;
+    top: 35vw;
+    width: 50%;
+    z-index: 300;
+}
+
+/* Not a mistake, I didn't specify the left for a reason*/
+.paper-body {
+    margin: 0px 3vw 3vw;
+}
+
+.paper-content {
+    float: left;
+    display: inline;
+    width: 100%;
+}
+
+.paper-cut-out {
+    background-image: url("../images/hole.png");
+    border-radius: 50%;
+    display: block;
+    height: 35px;
+    margin-left: 10px;
+    width: 35px;
+}
+
+.paper-cut-out-different {
+    background-position: right;
+}
+
+.paper-cut-out-match-top {
+    margin-top: 150px;
+}
+
+.paper-cut-out-middle {
+    background-position: center;
+    margin-top: 250px;
+}
+
+.paper-cut-out-small-star {
+    background-position: left;
+}
+
+.paper-cut-out-top {
+    background-position: left;
+    margin-top: 150px;
+}
+
+.paper-hole-punch {
+    display: inline;
+    float: left;
+    width: 10%;
+}
+
+.paper-header {
+    color: #000000;
+    font-family: monospace;
+    font-size: 2.5em;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    opacity: .68;
+    text-align: left;
+}
+
+.paper-unordered-list {
+    font-size: 1.25em;
+    line-height: 1.75;
+    list-style-type: square;
+    float: left;
+    margin-top: 0px;
+    margin-left: 25px;
+    width: 80%;
+}
+
+.paper-right {
+    float: left;
+    width: 90%;
+}
+
+.paper-tear-here {
+    border-top: 4px dotted grey;
 }
 
 /* Normalizes the container that sits above the "space container" */
-.space-container{
+.space-container {
     height: 350%;
     margin: 0px;
     padding: 0px;
     width: 100vw;
 }
 
-/**
- Mars gif by Krapey,
- https://www.deviantart.com/krapey/art/Mars-Animation-Gif-771243998
-**/
-
-.mars{
-    background: url("../images/mars-cartoon.gif");
-    background-repeat: no-repeat;
-    width: 300px;
-    height: 300px;
-    position: relative;
-    border-radius: 50%;
-    left: 80%;
-    top: 15%;
-    z-index: 250;
-}
-/**
- Neptune gif by Krapey,
- https://www.deviantart.com/krapey/art/Neptune-Animated-Gif-771441568
-**/
-
-.neptune{
-    background: url("../images/neptune-cartoon.gif");
-    background-repeat: no-repeat;
-    background-size: 500px 500px;
-    width: 500px;
-    height: 500px;
-    position: relative;
-    border-radius: 50%;
-    left:5%;
-    top:34%;
-    z-index: 250;
-}
-
-.rocket{
-    background: url("../images/rocket1.png");
-    background-repeat: no-repeat;
-    background-size: 150px 250px;
-    width:150px;
-    height:250px;
-    position:absolute;
-    left:20%;
-    top:85%;
-    z-index: 350;
-}
-
-.paper{
-    position: absolute;
-    background: linear-gradient(to bottom right, #D8DBE2, #F7F7FF, #D8DBE2);
-    left: 25vw;
-    top: 35vw;
-    width: 50%;
-    z-index: 300;
-    box-shadow: 2px 2px 2px gray;
-    padding: 10px 15px;
-}
-
-.paper-header{
-    text-align: left;
-    font-size: 2.5em;
-    color: #007bff;
-    margin-left: 3vw;
-    margin-right: 3vw;
-}
-
-.paper-body{
-    margin: 0px 3vw;
-    margin-bottom: 5vw;
-    text-align: left;
-    font-size: 1.5em;
-    color: #373F51;
-    line-height: 1.5;
-}
-
-.hole-punch{
-    float: left;
-    display: inline;
-    width: 5%;
-}
-
-.cut-out{
-    display: block;
-    background-image: url("../images/hole.png");
-    width: 35px;
-    height: 35px;
-    margin-left: 10px;
-    border-radius: 50%;
-}
-
-.cut-out-top{
-    background-position: left;
-    margin-top: 25px;
-}
-
-.cut-out-middle{
-    background-position: center;
-    margin-top: 250px;
-}
-
-.cut-out-different{
-    background-position: right;
-}
-
-.cut-out-small-star{
-    background-position: left;
-}
-
-.paper-content {
-    float: left;
-    display: inline;
-    width: 95%;
-}
-
-.tear-here{
-    border-top: 4px dotted grey;
-}
-
-.highlight{
-    color: black;
-    opacity: .86;
-}
-
-.floating-text-container{
-    float: left;
-    top: 5vw;
-    z-index: 400;
-    text-align: center;
-    position: relative;
-    width: 100%;
-}
-
-.floating-text{
-    color: white;
-    font-size: 6em;
-    text-shadow: 2px 4px #58A4B0;
-}
-
-.floating-subtext{
-    color: white;
-    font-size: 3.5em;
-    text-shadow: 2px 4px #58A4B0;
-}
-
-.call-to-action{
-    width: 100%;
-    height: 10%;
-    text-align: center;
-    position: relative;
-    top: 55%;
-    z-index: 50;
-    align-items: center;
-    text-align: center;
-}
-
-.launch-text{
-    color: white;
-    font-size: 3em;
-    text-shadow: 1px 2px #58A4B0;
-}
+/* =============================================================================
+    Individual-level styles
+ =============================================================================*/
 
 #stylize-hr{
-    border-color: #58A4B0;
+    border-color: #000000;
+    opacity: .68;
     width: 85%;
-}
-
-.differentiate-name{
-    text-shadow: 2px 4px #007bff;
-}
-
-/**
-    launch button look
-    https://codepen.io/Der_Meier/pen/ZjNoqM
-**/
-
-.button-button, input[type="submit"], input[type="reset"] {
-   background: none;
-   border: none;
-   padding: 0;
-   font: inherit;
-   cursor: pointer;
-   outline: inherit;
-   margin-left:100px;
-   margin-top:115px;
-   width: 120px;
-   height: 80px;
-   border-radius: 50%;
-   position: absolute;
-   color: white;
-   font-size: 20px;
-   background-color: #FF0000;
-   box-shadow: 0px 10px 0 0 #BA0000, 0px 20px 0 0 #BA0000;
-   transition-property: margin-top, box-shadow;
-   transition-duration: 0.2s;
-   left: 40%;
-}
-
-.button-button:active {
-   color: #D9D9D9;
-   margin-top:125px;
-   background-color: #BA0000;
-   box-shadow: 0px 0px 0 0 #740000, 0px 10px 0 0 #740000;
-}
-
-.button-gehaeuse {
-   margin-left:80px;
-   margin-top:140px;
-   width: 160px;
-   height: 100px;
-   border-radius: 50%;
-   position: absolute;
-   color: #777777;
-   background-color: #BABABA;
-   box-shadow: 0px 7px 0 0 currentcolor, 0px 15px 0 0 currentcolor;
-   left: 40%;
 }

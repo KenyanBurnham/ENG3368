@@ -10,7 +10,8 @@
         <title>Kenyan Burnham's Scripting Exercise 2: CSS</title>
         <!--
           The stylesheet below this is filled with secondary CSS content from
-          other developers. I consider this as supplemental.
+          other developers. It's mostly supplemental, controlling the space background
+          and the call-to-action button styling.
         -->
         <link rel="stylesheet" href="css/secondary.css">
         <!--
@@ -22,9 +23,6 @@
     <body>
         <!--
             Dr. Baehr,
-
-            My goal in this project was not to realy too much on JS, or at least
-            not let the JS "outshine" the CSS work.
 
             I decided I would go with a space theme for this assignment. Though
             not realized in any of my other work, I do enjoy science and space
@@ -111,7 +109,7 @@
                             <li><a href="https://kenyanburnham.github.io/2311-Revolution360/" target="_blank">Revolution360</a>: A digital marketing campaign for a fictional energy company.</li>
                         </ul>
                         <p class="paper-body">
-                            Additionally, Kenyan has persued his own software projects that showcase his talents as a JavaScript developer, such as <a href="https://kenyanburnham.github.io/Readar/" target="_blank">Readar</a>; a readability tool that is currently in development.
+                            Additionally, Kenyan has pursued his own software projects that showcase his talents as a JavaScript developer, such as <a href="https://kenyanburnham.github.io/Readar/" target="_blank">Readar</a>; a readability tool that is currently in development.
                         </p>
                         <p class="paper-body">
                             With the cosmic array of experience that Kenyan has under his belt, Kenyan can design, develop, and edit all web materials needed to launch your product.
@@ -203,7 +201,8 @@
 
           createStars();
 
-          //Found this gem from https://css-tricks.com/books/greatest-css-tricks/scroll-animation/
+          // Found this gem from https://css-tricks.com/books/greatest-css-tricks/scroll-animation/
+          // This is what makes the rotation happen
           window.addEventListener('scroll', () => {
             document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
           }, false);
